@@ -1,0 +1,74 @@
+/* font family  */
+
+.lightText {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.regularText {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.mediumText {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+
+.semiBoldText {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+.boldText {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+/* header text  */
+.lightHeaderText {
+  font-family: "Clash Grotesk", sans-serif;
+  font-weight: 300;
+}
+
+.regularHeaderText {
+  font-family: "Clash Grotesk", sans-serif;
+  font-weight: 400;
+}
+
+.mediumHeaderText {
+  font-family: "Clash Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+.semiBoldHeaderText {
+  font-family: "Clash Grotesk", sans-serif;
+  font-weight: 600;
+}
+
+.boldHeaderText {
+  font-family: "Clash Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.textCenter {
+  text-align: center;
+}
+.textLeft {
+  text-align: left;
+}
+.textRight {
+  text-align: right;
+}
+
+/* font Style  */
+
+.capitalize {
+  text-transform: capitalize;
+}
+.upper {
+  text-transform: uppercase;
+}
+.underLine {
+  text-decoration: underline;
+}
