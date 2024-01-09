@@ -28,12 +28,12 @@ const MissionSection = () => {
                     </p>
                 </div>
                 <div style={{ padding: isTabletOrMobile ? '0' : '68px 0' }}>
-                    <img src={MissionImg} style={{ left: isTabletOrMobile ? '0' : '-90px' }} />
+                    <img src={MissionImg} style={{ left: isTabletOrMobile ? '0' : '-90px', width: '100%', height: '100%' }} />
                 </div>
             </section>
             <section className={'missionContainer'} >
                 <div style={{ order: isTabletOrMobile ? '2' : '1', padding: isTabletOrMobile ? '0' : '68px 0' }}>
-                    <img src={MissionImg} style={{ right: isTabletOrMobile ? '0' : '-90px' }} />
+                    <img src={MissionImg} style={{ right: isTabletOrMobile ? '0' : '-90px', width: '100%', height: '100%' }} />
                 </div>
                 <div className='coloredContainer' style={{ order: isTabletOrMobile ? '1' : '2' }}>
                     <p className={'semiBoldText f18'}>What is our mission?</p>

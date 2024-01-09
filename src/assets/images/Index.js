@@ -16,6 +16,7 @@ import PlayStore from './playstore.png';
 import AppStore from './appstore.png';
 import GetStarted from './getStarted.png';
 
+
 export {
     logoSVG,
     Twitter,
@@ -34,4 +35,5 @@ export {
     PlayStore,
     AppStore,
     GetStarted,
+
 }

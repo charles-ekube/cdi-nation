@@ -1,6 +1,7 @@
 .navbar {
   padding: 20px;
   position: relative;
+  /* width: 100%; */
 }
 .navLinksContainer {
   display: none;

@@ -1,19 +1,21 @@
 main {
-  width: 100%;
+  /* width: 100%; */
 }
+
 .heroSection {
-  background-image: url("../images/herobg.svg");
+  /* background-image: url("../images/herobg.svg"); */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-origin: border-box;
-  padding: 0 20px;
+  padding: 30px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin-bottom: 40px;
+  /* width: 100%; */
 }
 
 .heroSection p {
@@ -21,6 +23,7 @@ main {
   line-height: 22px;
   margin-bottom: 16px;
 }
+
 .heroSection h2 {
   line-height: 40px;
   margin-bottom: 16px;
@@ -31,25 +34,31 @@ main {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.heroInputContainer {
-  background: #f5f5f5;
+
+.heroSection .heroInputContainer {
+  /* background: ; */
   border-radius: 20px;
   max-width: 666px;
   margin: auto;
-  padding: 10px 16px;
+  padding: 5px 8px 5px 0;
   display: flex;
+  gap: 10px;
 }
-.heroInputContainer input {
+
+.heroSection .heroInputContainer input {
   background: inherit;
-  border: none;
+  border: 1px solid rgba(219, 224, 229, 1);
   width: 100%;
-  margin-right: 10px;
+  border-radius: 8px;
+  height: 46px;
+  padding-left: 8px;
 }
-.heroInputContainer button {
+
+.heroSection .heroInputContainer button {
   width: 147px;
-  height: 57px;
+  height: 46px;
   background: #6a1b9a;
-  border-radius: 10px;
+  border-radius: 8px;
   color: #fff;
   border: none;
 }
@@ -64,28 +73,36 @@ main {
 .socialLinksContainer {
   margin-top: 16px;
 }
+
 .socialLinksContainer ul li {
   margin-right: 8px;
   margin-top: 2px;
 }
+
 .socialLinksContainer span {
   margin-right: 8px;
 }
+
 .missionContainer {
   background: #fff;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  width: 100%;
 }
+
 .coloredContainer {
   background: #f3e5f5;
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
+
 .discoveryContainer {
   padding: 40px 20px;
 }
+
 .discoveryContainer > div:nth-child(2) {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -93,15 +110,18 @@ main {
   padding: 20px 0 0 0;
   justify-content: center;
 }
+
 .teachingsCardContainer {
   background: #ffffff;
   box-shadow: 0px 0px 8px rgba(189, 189, 189, 0.25);
   border-radius: 15px;
 }
+
 .activitiesCardContainer {
   border-radius: 15px;
   padding: 45px;
 }
+
 .activitiesCardContainer button {
   display: flex;
   justify-content: center;
@@ -112,51 +132,60 @@ main {
   border-radius: 5px;
   color: #fff;
 }
+
 .downloadSection {
   padding: 40px 20px;
   background: #212121;
 }
 
-@media (min-width: 920px) {
+@media screen and (min-width: 920px) {
   .heroSection {
     height: 736px;
+    padding: 0 200px;
   }
+
   .heroSection h2 {
     font-size: 72px;
     line-height: 80px;
   }
+
   .heroSection p {
     margin-bottom: 64px;
   }
+
   .left {
     text-align: left;
     padding-left: 5px;
   }
+
   .bottom {
     width: 925px;
     margin: 0 auto;
   }
-  .heroSection {
-    padding: 0 200px;
-  }
+
   .missionContainer {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .coloredContainer {
     padding: 0 140px;
   }
+
   .missionContainer img {
     width: 100%;
     height: 100%;
     position: relative;
   }
+
   .discoveryContainer {
     padding: 200px 64px;
   }
+
   .discoveryContainer > div:nth-child(2) {
     padding: 120px 0;
     grid-template-columns: repeat(3, 1fr);
   }
+
   .downloadSection {
     padding: 157px 77px;
   }

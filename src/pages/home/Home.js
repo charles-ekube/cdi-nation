@@ -20,12 +20,14 @@ const Home = () => {
             <NavBar />
             <HeroSection />
             <MissionSection />
+            {/*
+           
             <DiscoverSection />
             <TeachingsSection />
             <ActivitiesSection />
             <DownloadSection />
             <GetStartedSection />
-            <Footer />
+            <Footer /> */}
         </>
     )
 }
