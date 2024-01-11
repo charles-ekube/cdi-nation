@@ -15,6 +15,12 @@ import Video from './video.png';
 import PlayStore from './playstore.png';
 import AppStore from './appstore.png';
 import GetStarted from './getStarted.png';
+import HeroSlide1 from './slide1.svg';
+import HeroSlide2 from './slide2.svg';
+import HeroSlide3 from './slide3.svg';
+import HeroSlide4 from './slide4.svg';
+
+
 
 
 export {
@@ -35,5 +41,9 @@ export {
     PlayStore,
     AppStore,
     GetStarted,
+    HeroSlide1,
+    HeroSlide2,
+    HeroSlide3,
+    HeroSlide4,
 
 }

@@ -1,192 +1,24 @@
-main {
-  /* width: 100%; */
-}
-
 .heroSection {
-  /* background-image: url("../images/herobg.svg"); */
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-origin: border-box;
-  padding: 30px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 40px;
-  /* width: 100%; */
-}
-
-.heroSection p {
-  letter-spacing: 0.02rem;
-  line-height: 22px;
-  margin-bottom: 16px;
-}
-
-.heroSection h2 {
-  line-height: 40px;
-  margin-bottom: 16px;
-  font-size: 35px;
-  letter-spacing: 0.05em;
-  background: linear-gradient(90deg, #6a1b9a 0%, #d24913 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.heroSection .heroInputContainer {
-  /* background: ; */
-  border-radius: 20px;
-  max-width: 666px;
-  margin: auto;
-  padding: 5px 8px 5px 0;
-  display: flex;
-  gap: 10px;
-}
-
-.heroSection .heroInputContainer input {
-  background: inherit;
-  border: 1px solid rgba(219, 224, 229, 1);
-  width: 100%;
-  border-radius: 8px;
-  height: 46px;
-  padding-left: 8px;
-}
-
-.heroSection .heroInputContainer button {
-  width: 147px;
-  height: 46px;
-  background: #6a1b9a;
-  border-radius: 8px;
-  color: #fff;
-  border: none;
-}
-
-::placeholder {
-  color: #bdbdbd;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.socialLinksContainer {
-  margin-top: 16px;
-}
-
-.socialLinksContainer ul li {
-  margin-right: 8px;
-  margin-top: 2px;
-}
-
-.socialLinksContainer span {
-  margin-right: 8px;
-}
-
-.missionContainer {
-  background: #fff;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
 }
-
-.coloredContainer {
-  background: #f3e5f5;
+.heroSection header {
   padding: 40px 20px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
-.discoveryContainer {
-  padding: 40px 20px;
-}
-
-.discoveryContainer > div:nth-child(2) {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 30px;
-  padding: 20px 0 0 0;
-  justify-content: center;
-}
-
-.teachingsCardContainer {
-  background: #ffffff;
-  box-shadow: 0px 0px 8px rgba(189, 189, 189, 0.25);
-  border-radius: 15px;
-}
-
-.activitiesCardContainer {
-  border-radius: 15px;
-  padding: 45px;
-}
-
-.activitiesCardContainer button {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 127px;
-  height: 52px;
-  background: #0e0e0e;
-  border-radius: 5px;
+  justify-content: center;
+  background: rgba(106, 27, 154, 1);
   color: #fff;
 }
 
-.downloadSection {
-  padding: 40px 20px;
-  background: #212121;
+.heroSection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@media screen and (min-width: 920px) {
-  .heroSection {
-    height: 736px;
-    padding: 0 200px;
-  }
-
-  .heroSection h2 {
-    font-size: 72px;
-    line-height: 80px;
-  }
-
-  .heroSection p {
-    margin-bottom: 64px;
-  }
-
-  .left {
-    text-align: left;
-    padding-left: 5px;
-  }
-
-  .bottom {
-    width: 925px;
-    margin: 0 auto;
-  }
-
-  .missionContainer {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .coloredContainer {
-    padding: 0 140px;
-  }
-
-  .missionContainer img {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-
-  .discoveryContainer {
-    padding: 200px 64px;
-  }
-
-  .discoveryContainer > div:nth-child(2) {
-    padding: 120px 0;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .downloadSection {
-    padding: 157px 77px;
-  }
+@media screen and (min-width: 768px) {
 }

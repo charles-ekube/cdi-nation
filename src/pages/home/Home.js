@@ -19,7 +19,7 @@ const Home = () => {
         <>
             <NavBar />
             <HeroSection />
-            <MissionSection />
+            {/* <MissionSection /> */}
             {/*
            
             <DiscoverSection />
