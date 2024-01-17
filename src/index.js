@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'animate.css';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

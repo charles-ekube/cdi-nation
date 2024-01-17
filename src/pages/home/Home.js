@@ -12,12 +12,15 @@ import TeachingsSection from '../../components/home/TeachingsSection';
 import ActivitiesSection from '../../components/home/ActivitiesSection';
 import DownloadSection from '../../components/home/DownloadSection';
 import GetStartedSection from '../../components/home/GetStartedSection';
+import Text from '../../utils/CustomText';
 
 
 const Home = () => {
     return (
         <>
-            <NavBar />
+            <NavBar >
+            
+            </NavBar>
             <HeroSection />
             {/* <MissionSection /> */}
             {/*
@@ -28,6 +31,9 @@ const Home = () => {
             <DownloadSection />
             <GetStartedSection />
             <Footer /> */}
+            <Text>
+                fkvjnfvkfnvkjfvnvkjfnvf
+            </Text>
         </>
     )
 }

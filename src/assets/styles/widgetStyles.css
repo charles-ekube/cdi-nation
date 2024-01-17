@@ -43,6 +43,10 @@
   align-items: center;
   width: 100%;
 }
+/* nav section ends */
+
+
+/* Footer */
 .footerContainer {
   display: grid;
   grid-template-columns: repeat(fill, minmax(300px, 1fr));
