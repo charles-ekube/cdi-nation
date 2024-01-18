@@ -42,10 +42,10 @@ const HeroSection = () => {
                         We are the inspiration people who are been raised by God to take over nations, cities, territories etc.
                     </p>
                 </div>
-                <div className={'heroInputContainer'}>
-                    <CustomInput />
-                    <Button text={'Get notified'} className={'heroInputButton'} />
-                </div>
+                // <div className={'heroInputContainer'}>
+                //     <CustomInput />
+                //     <Button text={'Get notified'} className={'heroInputButton'} />
+                // </div>
             </header>
             <HeroCarousel />
         </section>
