@@ -5,6 +5,7 @@ import { BiMenu } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 import '../assets/styles/textStyles.css';
 import '../assets/styles/generalStyles.css';
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
 
@@ -22,8 +23,10 @@ const NavBar = () => {
                     </div>
                     <div className={'navLinksContainer'}>
                         <ul className={'navLinksListContainer'}>
-                            <li className={'semiBoldText f16 textCenter'}>Home</li>
+                            
+                            <li className={'semiBoldText f16 textCenter'}><Link to = '/'>Home</Link></li>
                             <li className={'semiBoldText f16 textCenter'}>About CDI</li>
+                            <li className={'semiBoldText f16 textCenter'}><Link to = "/new">I'm New</Link></li>
                             <li className={'semiBoldText f16 textCenter'}>Testimonies</li>
                             <li className={'semiBoldText f16 textCenter'}>Workforce</li>
                             <li className={'semiBoldText f16 textCenter'}>Contact</li>
