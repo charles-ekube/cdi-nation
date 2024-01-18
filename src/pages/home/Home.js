@@ -22,18 +22,16 @@ const Home = () => {
             
             </NavBar>
             <HeroSection />
-            {/* <MissionSection /> */}
-            {/*
+             <MissionSection />
+            
            
             <DiscoverSection />
             <TeachingsSection />
             <ActivitiesSection />
             <DownloadSection />
             <GetStartedSection />
-            <Footer /> */}
-            <Text>
-                fkvjnfvkfnvkjfvnvkjfnvf
-            </Text>
+            <Footer /> 
+           
         </>
     )
 }
