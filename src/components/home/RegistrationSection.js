@@ -36,7 +36,7 @@ const RegistrationSection = () => {
                         handleImageChange={handleImageChange}
                     />
                 </div>
-                <QRCodeComponent url={websiteUrl}/>
+                {/* <QRCodeComponent url={websiteUrl}/> */}
             </form>
 
         </section>
