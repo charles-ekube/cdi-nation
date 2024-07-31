@@ -1,54 +1,35 @@
 /* font family  */
 
 .lightText {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 300;
+  font-style: normal;
 }
 
 .regularText {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
 }
 
 .mediumText {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 500;
+  font-style: normal;
 }
 
 .semiBoldText {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Amaranth", sans-serif;
   font-weight: 600;
+  font-style: normal;
 }
 
 .boldText {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Amaranth", sans-serif;
   font-weight: 700;
-}
-
-/* header text  */
-.lightHeaderText {
-  font-family: "Clash Grotesk", sans-serif;
-  font-weight: 300;
-}
-
-.regularHeaderText {
-  font-family: "Clash Grotesk", sans-serif;
-  font-weight: 400;
-}
-
-.mediumHeaderText {
-  font-family: "Clash Grotesk", sans-serif;
-  font-weight: 500;
-}
-
-.semiBoldHeaderText {
-  font-family: "Clash Grotesk", sans-serif;
-  font-weight: 600;
-}
-
-.boldHeaderText {
-  font-family: "Clash Grotesk", sans-serif;
-  font-weight: 700;
+  font-style: normal;
 }
 
 .textCenter {

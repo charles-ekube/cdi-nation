@@ -1,49 +1,28 @@
-import React, { useState } from "react";
-import Text from "./CustomText";
+import React from 'react';
+const CustomInput = (props) => {
 
-const CustomInput = ({ label, type, name, value, onfocus, onChange, placeholder, disabled, maxLength, customLabel, inputStyle, customInputContainer, multiple, ref, key, ...otherProps }) => {
-    const [showPassword, setShowPassword] = useState(false);
-
-    const handleTogglePassword = () => {
-        setShowPassword(!showPassword);
-    };
+    const { label, type, name, value, onChange, placeholder, disabled, maxLength, customLabel, inputStyle, customInputContainer,
+        multiple, height, icon, togglePassword, autoComplete } = props
 
     return (
         <>
-            <div className={`inputContainer ${customInputContainer}`} {...otherProps}>
-                <label>
-                    <Text tag={"p"} className={"f14 mediumText"}>
-                        {label}
-                    </Text>
+            <div className={`inputContainer ${customInputContainer}`}>
+                <label className={`f16 semiBoldText flex alignCenter ${customLabel}`} style={{color:'rgba(3, 32, 39, 1)', fontWeight:'400'}} >
+                    {label}
                 </label>
-                <div className={"flexRow alignCenter input"}>
-                    <input
-                        type={showPassword ? "text" : type}
-                        name={name}
-                        value={value}
-                        onChange={onChange}
-                        placeholder={placeholder}
-                        className={`${inputStyle}`}
-                        disabled={disabled}
-                        maxLength={maxLength}
-                        multiple={multiple}
-                        ref={ref}
-                        key={key}
-                        aria-autocomplete="none"
-                        autoComplete="new-password"
-                        onFocus={onfocus}
+                <div className={`input flexRow alignCenter justifyBetween ${inputStyle}`}>
+                    <input type={type} name={name} value={value} onChange={onChange}
+                        placeholder={placeholder} className={'inputBox'}
+                        disabled={disabled} maxLength={maxLength} multiple={multiple}
+                        style={{ height: height, }} autoComplete={autoComplete}
                     />
-                    {type === "password" && (
-                        <button type="button" onClick={handleTogglePassword}>
-                            <Text tag={'p'} className={"f10 mediumText"}>
-                                {showPassword ? "Hide" : "Show"}
-                            </Text>
-                        </button>
-                    )}
+                    {icon && icon}
                 </div>
+
+
             </div>
         </>
-    );
-};
+    )
+}
 
-export default CustomInput;
+export default CustomInput

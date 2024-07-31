@@ -1,67 +1,35 @@
 .heroSection {
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.heroSection header {
-  padding: 40px 20px;
+  background-image: url('../images/main.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: rgba(106, 27, 154, 1);
-  color: #fff;
+  width: 100%;
 }
 
-.heroSection img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.registrationContainer {
+  padding: 40px 20px;
+  background-color: #fff;
 }
-.heroSection h2 {
-  font-size: 32px;
-}
-.heroSection span {
-  color: #e1bee7;
-}
-.heroSection p {
-  font-size: 16px;
-  margin-bottom: 40px;
-}
-.heroInputContainer {
-  background: #fff;
-  display: flex;
-  padding: 18px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 20px;
-  width: 100%;
-}
-.heroInputButton {
-  display: flex;
-  width: 147px;
-  padding: 14px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 10px;
-  border: none;
-  background: #6a1b9a;
-  color: #f5f5f5;
+
+.formContainer {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 24px;
+  padding: 20px;
+  margin-top: 20px;
+  /* display: grid; */
+  /* grid-template-columns: repeat(1,1fr); */
 }
 
 @media screen and (min-width: 768px) {
-  .heroSection header {
-    padding: 0 150px;
+  .registrationContainer {
+    padding: 80px 120px;
   }
-  .heroSection h2 {
-    font-size: 72px;
-    max-width: 550px;
+  .formContainer {
+    padding:40px;
+    margin: 40px auto ;
+    max-width: 600px;
+    /* grid-template-columns: repeat(2,1fr); */
   }
-  .heroSection p {
-    font-size: 18px;
-    margin-bottom: 60px;
-  }
+  
 }

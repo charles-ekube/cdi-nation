@@ -3,6 +3,7 @@
   position: absolute;
   left: 0;
   right: 0;
+  top: 0;
   z-index: 10;
   color: #fff;
   /* width: 100%; */
@@ -74,9 +75,9 @@
   justify-content: space-between !important;
 }
 
-@media (min-width: 920px) {
+@media (min-width: 768px) {
   .navbar {
-    padding: 20px 64px;
+    padding: 20px 120px;
   }
   .navLinksContainer {
     display: block;

@@ -6,6 +6,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import '../assets/styles/textStyles.css';
 import '../assets/styles/generalStyles.css';
 import { Link } from "react-router-dom"
+import Button from '../utils/CustomButton';
 
 const NavBar = () => {
 
@@ -16,38 +17,16 @@ const NavBar = () => {
 
     return (
         <>
-            <nav className={'navbar'}>
-                <div className={'flexRow justifyBetween alignCenter'}>
-                    <div>
-                        <img src={logoSVG} alt='logo' />
-                    </div>
-                    <div className={'navLinksContainer'}>
-                        <ul className={'navLinksListContainer'}>
-                            
-                            <li className={'semiBoldText f16 textCenter'}><Link to = '/'>Home</Link></li>
-                            <li className={'semiBoldText f16 textCenter'}>About CDI</li>
-                            <li className={'semiBoldText f16 textCenter'}><Link to = "/new">I'm New</Link></li>
-                            <li className={'semiBoldText f16 textCenter'}>Testimonies</li>
-                            <li className={'semiBoldText f16 textCenter'}>Workforce</li>
-                            <li className={'semiBoldText f16 textCenter'}>Contact</li>
-                        </ul>
-                    </div>
-                    <div className={'mobileNavBtnContainer'}>
-                        <BiMenu size={'33px'} onClick={toggleMobileNav} />
-                    </div>
-                </div>
-                {mobileNav &&
-                    <aside className={'mobileNavContainer'}>
-                        <div className={'closeBtnContainer'}>
-                            <AiOutlineClose size={'26px'} onClick={toggleMobileNav} />
-                        </div>
-                        <ul className={'mobileNavList'}>
-                            <li className={'boldText f16'}>About CDI</li>
-                            <li className={'boldText f16'}>Testimonies</li>
-                            <li className={'boldText f16'}>Workforce</li>
-                            <li className={'boldText f16'}>Contact</li>
-                        </ul>
-                    </aside>}
+            <nav className={'flexRow alignCenter justifyBetween navbar'}>
+                <section>
+                    <img src={logoSVG} alt='logo'/>
+                </section>
+                <section>
+                    <p>INC 2024</p>
+                </section>
+                <section>
+                    <Button text={'Register'}/>
+                </section>
             </nav>
 
 

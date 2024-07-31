@@ -7,11 +7,23 @@ import 'animate.css';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import { BrowserRouter } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './assets/styles/homeStyles.css';
+import './assets/styles/colors.css';
+import './assets/styles/fontStyles.css';
+import './assets/styles/generalStyles.css';
+import './assets/styles/textStyles.css';
+import './assets/styles/utils.css';
+import './assets/styles/widgetStyles.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+          <ToastContainer />
+          <App />
+        </BrowserRouter>
   </React.StrictMode>
 );
 
