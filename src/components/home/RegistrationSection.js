@@ -59,9 +59,11 @@ const RegistrationSection = () => {
     const [fullName, setFullName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
-    const [countryid, setCountryid] = useState('');
-    const [stateid, setstateid] = useState('');
+    const [countryid, setCountryid] = useState(0);
+    const [stateid, setstateid] = useState(0);
     const [image, setImage] = useState(null);
+    const [country, setCountry] = useState(null);
+    const [state, setState] = useState(null);
 
     // const handleImageChange = (file) => {
     //     const reader = new FileReader();
@@ -107,63 +109,65 @@ const RegistrationSection = () => {
                 <h3 className={'textCenter boldText f28'}>Inspiration National Convention 2024 Registration</h3>
             </header>
             <form className={'formContainer'} onSubmit={handleSubmit}>
-            <aside>
-                <div>
-                    <CustomInput label={'Full Name'} value={fullName} onChange={(e) => setFullName(e.target.value)} />
-                </div>
-                <div>
-                    <CustomInput label={'Phone Number'} value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
-                </div>
-                <div>
-                    <CustomInput label={'Email Address'} value={email} onChange={(e) => setEmail(e.target.value)} />
-                </div>
-                <div className='inputContainer'>
-                    <label className={`f16 semiBoldText flex alignCenter`} style={{ color: 'rgba(3, 32, 39, 1)', fontWeight: '400' }}>
-                        Country
-                    </label>
-                    <CountrySelect
-                        onChange={(e) => {
-                            setCountryid(e.name);
-                            // console.log(e)
-                        }}
-                        placeHolder="Select Country"
-                        style={{ backgroundColor: 'rgba(249, 249, 251, 1)' }}
-                        containerClassName={'input'}
-                    />
-                </div>
-                <div className='inputContainer'>
-                    <label className={`f16 semiBoldText flex alignCenter`} style={{ color: 'rgba(3, 32, 39, 1)', fontWeight: '400' }}>
-                        State
-                    </label>
-                    <StateSelect
-                        countryid={countryid}
-                        onChange={(e) => {
-                            setstateid(e.name);
-                            // console.log(e)
-                        }}
-                        placeHolder="Select State"
-                        style={{ backgroundColor: 'rgba(249, 249, 251, 1)' }}
-                        containerClassName={'input'}
-                    />
-                </div>
-                {/* <div>
+                <aside>
+                    <div>
+                        <CustomInput label={'Full Name'} value={fullName} onChange={(e) => setFullName(e.target.value)} />
+                    </div>
+                    <div>
+                        <CustomInput label={'Phone Number'} value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+                    </div>
+                    <div>
+                        <CustomInput label={'Email Address'} value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className='inputContainer'>
+                        <label className={`f16 semiBoldText flex alignCenter`} style={{ color: 'rgba(3, 32, 39, 1)', fontWeight: '400' }}>
+                            Country
+                        </label>
+                        <CountrySelect
+                            onChange={(e) => {
+                                setCountryid(e.id);
+                                setCountry(e.name)
+                            }}
+                            placeHolder="Select Country"
+                            style={{ backgroundColor: 'rgba(249, 249, 251, 1)' }}
+                            containerClassName={'input'}
+                        />
+
+                    </div>
+                    <div className='inputContainer'>
+                        <label className={`f16 semiBoldText flex alignCenter`} style={{ color: 'rgba(3, 32, 39, 1)', fontWeight: '400' }}>
+                            State
+                        </label>
+                        <StateSelect
+                            countryid={countryid}
+                            onChange={(e) => {
+                                setstateid(e.id);
+                                setState(e.name)
+                            }}
+                            placeHolder="Select State"
+                            style={{ backgroundColor: 'rgba(249, 249, 251, 1)' }}
+                            containerClassName={'input'}
+                        />
+
+                    </div>
+                    {/* <div>
                     <ImageUpload
                         label="Upload Receipt"
                         image={image}
                         handleImageChange={handleImageChange}
                     />
                 </div> */}
-                  <div>
-                    <ImageUpload
-                        label="Upload Receipt"
-                        image={image}
-                        handleImageChange={handleImageChange}
-                    />
-                </div>
-                <div>
-                    <Button text={'Submit'} />
-                </div>
-            </aside>
+                    <div>
+                        <ImageUpload
+                            label="Upload Receipt"
+                            image={image}
+                            handleImageChange={handleImageChange}
+                        />
+                    </div>
+                    <div>
+                        <Button text={'Submit'} />
+                    </div>
+                </aside>
                 <aside>
                     <article>
 
