@@ -4,17 +4,57 @@ import ImageUpload from '../../utils/ImageUpload'
 import QRCodeComponent from '../../utils/QRCodeComponent';
 import { CitySelect, CountrySelect, StateSelect } from 'react-country-state-city';
 import Button from '../../utils/CustomButton';
+import emailjs from 'emailjs-com';
+
+// "service_8jybiwi","template_tsz3psf"
 
 const RegistrationSection = () => {
-    // const [image, setImage] = useState(null);
-    // const handleImageChange = (event) => {
-    //     const file = event.target.files[0];
-    //     setImage(file);
-    // };
-    const websiteUrl = "https://www.cdination.org/";
-    // const [countryid, setCountryid] = useState(0);
-    // const [stateid, setstateid] = useState(0);
+    // const [formData, setFormData] = useState({
+    //     fullName: '',
+    //     phoneNumber: '',
+    //     email: '',
+    //     country: '',
+    //     state: '',
+    //     receipt: null
+    // });
 
+    // const handleInputChange = (e) => {
+    //     const { name, value } = e.target;
+    //     setFormData({ ...formData, [name]: value });
+    // };
+
+    // const handleFileChange = (e) => {
+    //     const file = e.target.files[0];
+    //     const reader = new FileReader();
+    //     reader.onloadend = () => {
+    //         setFormData({ ...formData, receipt: reader.result });
+    //     };
+    //     reader.readAsDataURL(file);
+    // };
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+
+    //     const { fullName, phoneNumber, email, country, state, receipt } = formData;
+
+    //     const templateParams = {
+    //         fullName,
+    //         phoneNumber,
+    //         email,
+    //         country,
+    //         state,
+    //         receipt
+    //     };
+
+    //     emailjs.send('service_k6cnopk', 'template_tsz3psf', templateParams, 'fLx4tluxoYWZYgySY')
+    //         .then((response) => {
+    //             console.log('SUCCESS!', response.status, response.text);
+    //             alert('Message sent successfully');
+    //         }, (error) => {
+    //             console.error('FAILED...', error);
+    //             alert('Failed to send message');
+    //         });
+    // };
 
     const [fullName, setFullName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -23,18 +63,36 @@ const RegistrationSection = () => {
     const [stateid, setstateid] = useState('');
     const [image, setImage] = useState(null);
 
-    const handleImageChange = (newImage) => {
-        setImage(newImage);
+    const handleImageChange = (file) => {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setImage(reader.result);
+        };
+        reader.readAsDataURL(file);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const message = `Full Name: ${fullName}\nPhone Number: ${phoneNumber}\nEmail Address: ${email}\nCountry: ${countryid}\nState: ${stateid}\nReceipt: ${image?.name || ''}`;
-        const whatsappUrl = `https://api.whatsapp.com/send?phone=07080223079&text=${encodeURIComponent(message)}`;
+        const templateParams = {
+            fullName,
+            phoneNumber,
+            email,
+            country: countryid,
+            state: stateid,
+            receipt: image
+        };
 
-        window.open(whatsappUrl, '_blank');
+        emailjs.send('service_k6cnopk', 'template_tsz3psf', templateParams, 'fLx4tluxoYWZYgySY')
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Message sent successfully');
+            }, (error) => {
+                console.error('FAILED...', error);
+                alert('Failed to send message');
+            });
     };
+
 
     return (
         <section className={'registrationContainer'}>
@@ -42,55 +100,54 @@ const RegistrationSection = () => {
                 <h3 className={'textCenter boldText f28'}>Inspiration National Convention 2024 Registration</h3>
             </header>
             <form className={'formContainer'} onSubmit={handleSubmit}>
-                <aside>
-                    <div>
-                        <CustomInput label={'Full Name'} value={fullName} onChange={(e) => setFullName(e.target.value)} />
-                    </div>
-                    <div>
-                        <CustomInput label={'Phone Number'} value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
-                    </div>
-                    <div>
-                        <CustomInput label={'Email Address'} value={email} onChange={(e) => setEmail(e.target.value)} />
-                    </div>
-                    <div className='inputContainer'>
-                        <label className={`f16 semiBoldText flex alignCenter`} style={{ color: 'rgba(3, 32, 39, 1)', fontWeight: '400' }} >
-                            Country
-                        </label>
-                        <CountrySelect
-                            onChange={(e) => {
-                                setCountryid(e.id);
-                            }}
-                            placeHolder="Select Country"
-                            style={{ backgroundColor: 'rgba(249, 249, 251, 1)' }}
-                            containerClassName={'input'}
-                        />
-                    </div>
-                    <div className='inputContainer'>
-                        <label className={`f16 semiBoldText flex alignCenter`} style={{ color: 'rgba(3, 32, 39, 1)', fontWeight: '400' }} >
-                            State
-                        </label>
-                        <StateSelect
-                            countryid={countryid}
-                            onChange={(e) => {
-                                setstateid(e.id);
-                            }}
-                            placeHolder="Select State"
-                            style={{ backgroundColor: 'rgba(249, 249, 251, 1)' }}
-                            containerClassName={'input'}
-                        />
-                    </div>
-                    <div>
-                        <ImageUpload
-                            label="Upload Receipt"
-                            image={image}
-                            handleImageChange={handleImageChange}
-                        />
-                    </div>
-                    <div>
-                        <Button text={'Submit'} />
-                    </div>
-                </aside>
-
+            <aside>
+                <div>
+                    <CustomInput label={'Full Name'} value={fullName} onChange={(e) => setFullName(e.target.value)} />
+                </div>
+                <div>
+                    <CustomInput label={'Phone Number'} value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+                </div>
+                <div>
+                    <CustomInput label={'Email Address'} value={email} onChange={(e) => setEmail(e.target.value)} />
+                </div>
+                <div className='inputContainer'>
+                    <label className={`f16 semiBoldText flex alignCenter`} style={{ color: 'rgba(3, 32, 39, 1)', fontWeight: '400' }}>
+                        Country
+                    </label>
+                    <CountrySelect
+                        onChange={(e) => {
+                            setCountryid(e.id);
+                        }}
+                        placeHolder="Select Country"
+                        style={{ backgroundColor: 'rgba(249, 249, 251, 1)' }}
+                        containerClassName={'input'}
+                    />
+                </div>
+                <div className='inputContainer'>
+                    <label className={`f16 semiBoldText flex alignCenter`} style={{ color: 'rgba(3, 32, 39, 1)', fontWeight: '400' }}>
+                        State
+                    </label>
+                    <StateSelect
+                        countryid={countryid}
+                        onChange={(e) => {
+                            setstateid(e.id);
+                        }}
+                        placeHolder="Select State"
+                        style={{ backgroundColor: 'rgba(249, 249, 251, 1)' }}
+                        containerClassName={'input'}
+                    />
+                </div>
+                <div>
+                    <ImageUpload
+                        label="Upload Receipt"
+                        image={image}
+                        handleImageChange={handleImageChange}
+                    />
+                </div>
+                <div>
+                    <Button text={'Submit'} />
+                </div>
+            </aside>
                 <aside>
                     <article>
 
