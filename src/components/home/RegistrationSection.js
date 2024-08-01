@@ -81,7 +81,7 @@ const [loading, setLoading] = useState(false);
     };
 
     const disabled = () => {
-        if(fullName === '' || phoneNumber === '' || email === '' || countryid ===0 || stateid === 0 || image === null || country === '' || state === '' || loading) {
+        if(fullName === '' || phoneNumber === '' || email === '' || countryid ===0 || stateid === 0  || country === '' || state === '' || loading) {
             return true
         }
         return false
@@ -104,14 +104,6 @@ const [loading, setLoading] = useState(false);
         emailjs.send('service_k6cnopk', 'template_tsz3psf', templateParams, 'fLx4tluxoYWZYgySY')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
-                setCountry('')
-                setCountryid(0)
-                setEmail('')
-                setFullName('')
-                setImage(null)
-                setPhoneNumber('')
-                setState('')
-                setstateid(0)
                 setLoading(false)
             }, (error) => {
                 console.error('FAILED...', error);
@@ -182,7 +174,7 @@ const [loading, setLoading] = useState(false);
                         />
                     </div>
                     <div>
-                        <Button text={'Submit'} disabled={disabled()}/>
+                        <Button text={'Submit'} />
                     </div>
                 </aside>
                 <aside>
