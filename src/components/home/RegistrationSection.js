@@ -62,9 +62,9 @@ const RegistrationSection = () => {
     const [countryid, setCountryid] = useState(0);
     const [stateid, setstateid] = useState(0);
     const [image, setImage] = useState(null);
-    const [country, setCountry] = useState(null);
-    const [state, setState] = useState(null);
-
+    const [country, setCountry] = useState('');
+    const [state, setState] = useState('');
+const [loading, setLoading] = useState(false);
     // const handleImageChange = (file) => {
     //     const reader = new FileReader();
     //     reader.onloadend = () => {
@@ -80,25 +80,42 @@ const RegistrationSection = () => {
         reader.readAsDataURL(file);
     };
 
+    const disabled = () => {
+        if(fullName === '' || phoneNumber === '' || email === '' || countryid ===0 || stateid === 0 || image === null || country === '' || state === '' || loading) {
+            return true
+        }
+        return false
+    }
+
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        setLoading(true)
         const templateParams = {
             fullName,
             phoneNumber,
             email,
-            country: countryid,
-            state: stateid,
+            country: country,
+            state: state,
             receipt: image
         };
 
         emailjs.send('service_k6cnopk', 'template_tsz3psf', templateParams, 'fLx4tluxoYWZYgySY')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
-                alert('Message sent successfully');
+                setCountry('')
+                setCountryid(0)
+                setEmail('')
+                setFullName('')
+                setImage(null)
+                setPhoneNumber('')
+                setState('')
+                setstateid(0)
+                setLoading(false)
             }, (error) => {
                 console.error('FAILED...', error);
-                alert('Failed to send message');
+                setLoading(false)
             });
     };
 
@@ -165,7 +182,7 @@ const RegistrationSection = () => {
                         />
                     </div>
                     <div>
-                        <Button text={'Submit'} />
+                        <Button text={'Submit'} disabled={disabled()}/>
                     </div>
                 </aside>
                 <aside>
