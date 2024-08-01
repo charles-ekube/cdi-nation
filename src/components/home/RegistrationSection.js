@@ -63,6 +63,13 @@ const RegistrationSection = () => {
     const [stateid, setstateid] = useState('');
     const [image, setImage] = useState(null);
 
+    // const handleImageChange = (file) => {
+    //     const reader = new FileReader();
+    //     reader.onloadend = () => {
+    //         setImage(reader.result);
+    //     };
+    //     reader.readAsDataURL(file);
+    // };
     const handleImageChange = (file) => {
         const reader = new FileReader();
         reader.onloadend = () => {
@@ -116,7 +123,8 @@ const RegistrationSection = () => {
                     </label>
                     <CountrySelect
                         onChange={(e) => {
-                            setCountryid(e.id);
+                            setCountryid(e.name);
+                            // console.log(e)
                         }}
                         placeHolder="Select Country"
                         style={{ backgroundColor: 'rgba(249, 249, 251, 1)' }}
@@ -130,14 +138,22 @@ const RegistrationSection = () => {
                     <StateSelect
                         countryid={countryid}
                         onChange={(e) => {
-                            setstateid(e.id);
+                            setstateid(e.name);
+                            // console.log(e)
                         }}
                         placeHolder="Select State"
                         style={{ backgroundColor: 'rgba(249, 249, 251, 1)' }}
                         containerClassName={'input'}
                     />
                 </div>
-                <div>
+                {/* <div>
+                    <ImageUpload
+                        label="Upload Receipt"
+                        image={image}
+                        handleImageChange={handleImageChange}
+                    />
+                </div> */}
+                  <div>
                     <ImageUpload
                         label="Upload Receipt"
                         image={image}
