@@ -17,10 +17,51 @@
   border-radius: 24px;
   padding: 20px;
   margin-top: 20px;
-  /* display: grid; */
-  /* grid-template-columns: repeat(1,1fr); */
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
 }
+.formContainer aside {
+  display: flex;
+  flex-direction: column;
 
+}
+.formContainer aside article {
+  padding: 0 40px;
+}
+.formContainer aside article h3 {
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: "Amaranth", sans-serif;
+}
+.formContainer aside article p {
+  padding: 10px 0;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: "Amaranth", sans-serif;
+  font-weight: 400;
+
+}
+.formContainer aside article ul {
+  padding-left: 30px;
+}
+.formContainer aside article ul li {
+  margin: 5px 0;
+  font-size: 14px;
+  font-family: "Amaranth", sans-serif;
+  list-style: disc;
+  line-height: 20px;
+  font-weight: 400;
+
+}
+.formContainer aside article ol li {
+  margin: 5px 0;
+  font-size: 14px;
+  font-family: "Amaranth", sans-serif;
+  line-height: 20px;
+  font-weight: 400;
+
+}
+ 
 @media screen and (min-width: 768px) {
   .registrationContainer {
     padding: 80px 120px;
@@ -28,8 +69,8 @@
   .formContainer {
     padding:40px;
     margin: 40px auto ;
-    max-width: 600px;
-    /* grid-template-columns: repeat(2,1fr); */
+    /* max-width: 600px; */
+    grid-template-columns: repeat(2,1fr);
   }
   
 }

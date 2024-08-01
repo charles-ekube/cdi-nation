@@ -32,7 +32,7 @@ function ImageUpload(props) {
 
     return (
         <div className={`inputContainer ${customInputContainer}`} style={{ position: 'relative', cursor: 'pointer' }} onClick={handleClick}>
-            <label className={`f14 grey semiBoldText flex alignCenter ${customLabel}`}>
+             <label className={`f16 semiBoldText flex alignCenter`} style={{ color: 'rgba(3, 32, 39, 1)', fontWeight: '400' }} >
                 {label}
             </label>
             <div className={`input flexRow alignCenter justifyBetween ${inputStyle}`} style={{ padding: '0 16px', height: '48px' }}>
@@ -49,7 +49,7 @@ function ImageUpload(props) {
                     <p className={'f12 boldText'}>{preview}</p>
                 ) : (
                     <p className={'f10 boldText'} style={{ color: '#999CA0' }}>
-                        Upload corresponding food image in jpg or png (size within 6mb).
+                        Upload payment receipt for confirmation in jpg or png (size within 6mb).
                     </p>
                 )}
                 <label style={{ position: 'absolute', right: '16px' }}>
