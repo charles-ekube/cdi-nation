@@ -14,13 +14,63 @@
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   border-radius: 10px; /* Rounded corners */
   padding: 20px;
-  width: 300px;
+  /* width: 300px; */
   max-width: 100%;
   text-align: center;
   backdrop-filter: blur(10px); /* Frosted glass effect */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
   font-family: "Amaranth", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 500px;
+  height: 500px;
+  position: relative;
+}
+
+.glass-card img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  bottom: -25px;
+}
+
+.scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  /* border:1px solid red; */
+}
+.scroll marquee div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+color:rgb(71,29,38);
+font-family: "Amaranth", sans-serif;
+}
+.glassText h4 {
+  padding: 10px 0;
+  font-size: 20px;
+  color:rgb(71,29,38);
+}
+.glass-card h5 {
+  font-size: 16px;
+}
+.glass-card h3 {
+  font-size: 26px;
+}
+.glassText {
+  max-width: 100%;
+  /* color:#FFF; */
+  /* background: linear-gradient(97.14deg, #686bc8 7.11%, #a138ce 97.04%); */
+  -webkit-background-clip: text; /* For WebKit browsers */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  background-clip: text; /* For other browsers */
+  color: transparent;
 }
 
 
@@ -89,5 +139,19 @@
     /* max-width: 600px; */
     grid-template-columns: repeat(2,1fr);
   }
+  .glass-card h4 {
+    font-size: 32px;
+  
+  }
+  .glass-card h3 {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  .glassText {
+    max-width:500px;
+  }
+  
+  
+  
   
 }

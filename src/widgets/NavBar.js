@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { logoSVG } from '../assets/images/Index';
+import { LogoNew, logoSVG } from '../assets/images/Index';
 import '../assets/styles/widgetStyles.css';
 import { BiMenu } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -19,7 +19,7 @@ const NavBar = () => {
         <>
             <nav className={'flexRow alignCenter justifyBetween navbar'}>
                 <section>
-                    <img src={logoSVG} alt='logo'/>
+                    <img src={LogoNew} alt='logo'/>
                 </section>
                 <section>
                     <p>INC 2024</p>
