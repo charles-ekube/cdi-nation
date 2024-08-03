@@ -1,8 +1,7 @@
 import React from 'react';
-const CustomInput = (props) => {
+const CustomInput = ({ label, type, name, value, onChange, placeholder, disabled, maxLength, customLabel, inputStyle, customInputContainer,
+    multiple, height, icon, togglePassword, autoComplete }) => {
 
-    const { label, type, name, value, onChange, placeholder, disabled, maxLength, customLabel, inputStyle, customInputContainer,
-        multiple, height, icon, togglePassword, autoComplete } = props
 
     return (
         <>

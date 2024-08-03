@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import NavBar from '../../widgets/NavBar';
 import HeroSection from '../../components/home/HeroSection';
 import RegistrationSection from '../../components/home/RegistrationSection';
 
 
 const Home = () => {
+
+    const registrationSectionRef = useRef(null);
+
+    const scrollToRegistrationSection = () => {
+        registrationSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
             <>
-                <NavBar/>
-                <HeroSection/>
-                <RegistrationSection/>
+                <NavBar show register={scrollToRegistrationSection}/>
+                {/* <HeroSection/> */}
+                <RegistrationSection scroll={registrationSectionRef}/>
             </>
     )
 }

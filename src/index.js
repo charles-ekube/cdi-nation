@@ -17,6 +17,7 @@ import './assets/styles/textStyles.css';
 import './assets/styles/utils.css';
 import './assets/styles/widgetStyles.css';
 import "react-country-state-city/dist/react-country-state-city.css";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

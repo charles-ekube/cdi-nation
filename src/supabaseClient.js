@@ -1,8 +1,11 @@
 // supabaseClient.js
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = 'https://pgqmehfnrrgjkwqokkuh.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBncW1laGZucnJnamt3cW9ra3VoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjI2MDk0MzksImV4cCI6MjAzODE4NTQzOX0.jnmOIF46JkrLyHrOx7YzAW6mQqjfIuegODw33n2Iqsc';
+const supabaseUrl = 'https://xgcbvqczialixwicildn.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnY2J2cWN6aWFsaXh3aWNpbGRuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjI2MTcyNjUsImV4cCI6MjAzODE5MzI2NX0.uQd0mqB70mk_-o92u9PIZDNcHkmgL4HMxZr_Kggc2uw';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default supabase;
+
+
+// CdiNation2024Inc

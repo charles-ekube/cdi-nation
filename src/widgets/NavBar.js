@@ -8,7 +8,7 @@ import '../assets/styles/generalStyles.css';
 import { Link } from "react-router-dom"
 import Button from '../utils/CustomButton';
 
-const NavBar = () => {
+const NavBar = ({show, register}) => {
 
     const [mobileNav, setMobileNav] = useState(false)
     const toggleMobileNav = () => {
@@ -22,11 +22,9 @@ const NavBar = () => {
                     <img src={LogoNew} alt='logo'/>
                 </section>
                 <section>
-                    <p>INC 2024</p>
+                    <p className={'boldText f24'} style={{color:'#000'}}>INC 2024</p>
                 </section>
-                <section>
-                    <Button text={'Register'}/>
-                </section>
+              
             </nav>
 
 
