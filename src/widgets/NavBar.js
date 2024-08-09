@@ -22,7 +22,7 @@ const NavBar = ({show, register}) => {
                     <img src={LogoNew} alt='logo'/>
                 </section>
                 <section>
-                    <p className={'boldText f24'} style={{color:'#000'}}>INC 2024</p>
+                    <p className={'boldText f30'} style={{color:'#000'}}>INC 2024</p>
                 </section>
               
             </nav>

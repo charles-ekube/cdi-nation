@@ -212,9 +212,12 @@ const RegistrationSection =({props, scroll}) => {
                         <ol>
                             <li>Fill Out the Registration Form: Please complete all the required fields in the registration form with your accurate information. This helps us prepare adequately for your participation.</li>
                             <li>Upload Your Payment Receipt: After making your payment, kindly upload a clear image or PDF of your payment receipt using the upload section provided in the form. This step is crucial for us to verify your registration and secure your spot.</li>
-                            <li>Payment Details: Please make your payment to the following account number:
+                            <li style={{fontSize:'20px', lineHeight:'25px'}}>Payment Details: Please make your payment to the following account number:
+                                <br/>
                                 <br /> **Account Number**: 1003766187
+                                <br/>
                                 <br /> **Bank Name**: FCMB BANK
+                                <br/>
                                 <br /> **Account Name**: INSPIRATION MEDIA
                             </li>
                         </ol>
@@ -225,8 +228,8 @@ const RegistrationSection =({props, scroll}) => {
                             <li>Preparation: Knowing the number of attendees in advance helps us to make adequate preparations, ensuring everyone has a fulfilling and comfortable experience.</li>
                         </ul>
                         <p>We appreciate your cooperation and look forward to having you join us for this spiritually enriching event. If you have any questions or need assistance, please feel free to contact us.
-                        <br/> send us a mail @cdiministries@gmail.com
-                        <br/> +2347035687309
+                        <br/> send us a mail <br/> <span className={'boldText f20'}>@cdiministries@gmail.com</span> 
+                        <br/> Or call us <br/> <span className={'boldText f20'}>+2347035687309</span>
                         </p>
                         <p>God bless you!</p>
                     </article>

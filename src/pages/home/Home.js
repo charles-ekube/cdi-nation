@@ -15,7 +15,7 @@ const Home = () => {
     return (
             <>
                 <NavBar show register={scrollToRegistrationSection}/>
-                {/* <HeroSection/> */}
+                <HeroSection/>
                 <RegistrationSection scroll={registrationSectionRef}/>
             </>
     )

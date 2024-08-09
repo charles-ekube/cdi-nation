@@ -20,7 +20,7 @@ import HeroSlide2 from './slide2.svg';
 import HeroSlide3 from './slide3.svg';
 import HeroSlide4 from './slide4.svg';
 import Pastor1 from './IMG-20231103-WA0089.jpg';
-import Pastor2 from './IMG-20231103-WA0090.jpg';
+import Pastor2 from './INC_SITE.jpg';
 import Pastor3 from './IMG-20231103-WA0090-removebg.png';
 import LogoNew from './Cdi_logo+-removebg.png';
 
