@@ -128,7 +128,7 @@ const Verify = () => {
 
             });
             setLoading(false)
-            console.log(error,'ERRO')
+            // console.log(error,'ERRO')
         }
     };
 
