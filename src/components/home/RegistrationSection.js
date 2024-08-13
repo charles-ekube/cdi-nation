@@ -11,7 +11,7 @@ import { toast } from 'react-toastify';
 import Loader from '../../utils/Loader';
 import { useNavigate } from 'react-router-dom';
 
-const RegistrationSection =({props, scroll}) => {
+const RegistrationSection = ({ props, scroll }) => {
     const [fullName, setFullName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
@@ -50,8 +50,8 @@ const RegistrationSection =({props, scroll}) => {
                 pauseOnHover: true,
                 draggable: true,
                 theme: "light",
-        
-                });
+
+            });
         }
     };
 
@@ -104,7 +104,7 @@ const RegistrationSection =({props, scroll}) => {
                 //     pauseOnHover: true,
                 //     draggable: true,
                 //     theme: "light",
-            
+
                 //     });
                 // Reset form
                 setFullName('');
@@ -127,8 +127,8 @@ const RegistrationSection =({props, scroll}) => {
                     pauseOnHover: true,
                     draggable: true,
                     theme: "light",
-            
-                    });
+
+                });
             } finally {
                 setLoading(false);
             }
@@ -143,14 +143,14 @@ const RegistrationSection =({props, scroll}) => {
                 pauseOnHover: true,
                 draggable: true,
                 theme: "light",
-        
-                });
+
+            });
         }
     };
 
     return (
         <section className={'registrationContainer'} ref={scroll}>
-             {loading && <Loader />}
+            {loading && <Loader />}
             <header>
                 <h3 className={'textCenter boldText f28'}>Inspiration National Convention (INC) 2024 Registration</h3>
             </header>
@@ -160,10 +160,10 @@ const RegistrationSection =({props, scroll}) => {
                         <CustomInput label={'Full Name'} value={fullName} onChange={(e) => setFullName(e.target.value)} />
                     </div>
                     <div>
-                        <CustomInput label={'Phone Number'} value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} type={'tel'}/>
+                        <CustomInput label={'Phone Number'} value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} type={'tel'} />
                     </div>
                     <div>
-                        <CustomInput label={'Email Address'} value={email} onChange={(e) => setEmail(e.target.value)} type={'email'}/>
+                        <CustomInput label={'Email Address'} value={email} onChange={(e) => setEmail(e.target.value)} type={'email'} />
                     </div>
                     <div className='inputContainer'>
                         <label className={`f16 semiBoldText flex alignCenter`} style={{ color: 'rgba(3, 32, 39, 1)', fontWeight: '400' }}>
@@ -212,12 +212,12 @@ const RegistrationSection =({props, scroll}) => {
                         <ol>
                             <li>Fill Out the Registration Form: Please complete all the required fields in the registration form with your accurate information. This helps us prepare adequately for your participation.</li>
                             <li>Upload Your Payment Receipt: After making your payment, kindly upload a clear image or PDF of your payment receipt using the upload section provided in the form. This step is crucial for us to verify your registration and secure your spot.</li>
-                            <li style={{fontSize:'20px', lineHeight:'25px'}}>Payment Details: Please make your payment to the following account number:
-                                <br/>
+                            <li style={{ fontSize: '20px', lineHeight: '25px' }}>Payment Details: Please make your payment to the following account number:
+                                <br />
                                 <br /> **Account Number**: 1003766187
-                                <br/>
+                                <br />
                                 <br /> **Bank Name**: FCMB BANK
-                                <br/>
+                                <br />
                                 <br /> **Account Name**: INSPIRATION MEDIA
                             </li>
                         </ol>
@@ -228,8 +228,15 @@ const RegistrationSection =({props, scroll}) => {
                             <li>Preparation: Knowing the number of attendees in advance helps us to make adequate preparations, ensuring everyone has a fulfilling and comfortable experience.</li>
                         </ul>
                         <p>We appreciate your cooperation and look forward to having you join us for this spiritually enriching event. If you have any questions or need assistance, please feel free to contact us.
-                        <br/> send us a mail <br/> <span className={'boldText f20'}>@cdiministries@gmail.com</span> 
-                        <br/> Or call us <br/> <span className={'boldText f20'}>+2347035687309</span>
+                            <br /> Send us a mail <br />
+                            <a href="mailto:cdiministries@gmail.com" className="boldText f20">
+                                @cdiministries@gmail.com
+                            </a>
+                            <br /> Or call us <br />
+                            <a href="tel:+2347035687309" className="boldText f20">
+                                +2347035687309
+                            </a>
+
                         </p>
                         <p>God bless you!</p>
                     </article>
