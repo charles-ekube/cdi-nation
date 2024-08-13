@@ -229,11 +229,11 @@ const RegistrationSection = ({ props, scroll }) => {
                         </ul>
                         <p>We appreciate your cooperation and look forward to having you join us for this spiritually enriching event. If you have any questions or need assistance, please feel free to contact us.
                             <br /> Send us a mail <br />
-                            <a href="mailto:cdiministries@gmail.com" className="boldText f20">
+                            <a href="mailto:cdiministries@gmail.com" className="boldText f20" style={{color:'rgba(76, 111, 255, 1)', textDecoration:'underline'}}>
                                 @cdiministries@gmail.com
                             </a>
                             <br /> Or call us <br />
-                            <a href="tel:+2347035687309" className="boldText f20">
+                            <a href="tel:+2347035687309" className="boldText f20" style={{color:'rgba(76, 111, 255, 1)', textDecoration:'underline'}}>
                                 +2347035687309
                             </a>
 
